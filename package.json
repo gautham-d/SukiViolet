@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "dragscroll": "^0.0.8",
+    "gsap": "^3.10.4",
     "sharp": "^0.29.1"
   },
-  "scripts":{
+  "scripts": {
     "start": "npx parcel index.html"
   }
 }
