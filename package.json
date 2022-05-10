@@ -1,9 +1,11 @@
 {
+  "name": "sukiviolet",
+  "source": "index.html",
+  "scripts": {
+    "start": "npx parcel index.html"
+  },
   "dependencies": {
     "dragscroll": "^0.0.8",
     "sharp": "^0.29.1"
-  },
-  "scripts":{
-    "start": "npx parcel index.html"
   }
 }
