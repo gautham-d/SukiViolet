@@ -30,6 +30,8 @@ let y = 0;
 Lerp
 --------------------*/
 const lerp = (v0, v1, t) => {
+  console.log(`the lerp values are ${v0} , ${v1} , ${t}`);
+  console.log(`the expression value is ${v0 * (1 - t) + v1 * t}`);
   return v0 * (1 - t) + v1 * t;
 };
 
@@ -53,6 +55,7 @@ const dispose = (scroll) => {
     },
   });
 };
+
 dispose(0);
 
 /*--------------------
@@ -68,7 +71,9 @@ Touch
 let touchStart = 0;
 let touchY = 0;
 let isDragging = false;
+
 const handleTouchStart = (e) => {
+  console.log(e);
   touchStart = e.clientY || e.touches[0].clientY;
   isDragging = true;
   $menu.classList.add("is-dragging");

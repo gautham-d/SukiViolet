@@ -5,6 +5,10 @@ body {
   cursor: none;
 }
 
+.is-dragging {
+  cursor: grabbing;
+}
+
 .cursor {
   position: fixed;
   top: 0;
