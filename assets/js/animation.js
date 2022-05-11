@@ -121,14 +121,15 @@ Render
 --------------------*/
 const render = () => {
   requestAnimationFrame(render);
-  y = lerp(y, scrollY, 0.1);
+  y = lerp(y, scrollY, 0.1 / 2);
   dispose(y);
 
   scrollSpeed = y - oldScrollY;
   oldScrollY = y;
 
+  console.log(`scrollspeed is ${scrollSpeed}`);
   gsap.to($items, {
-    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.005,
+    scale: 1 - Math.min(100, scrollSpeed) * 0.005,
     rotate: scrollSpeed * 0.2,
   });
 };
